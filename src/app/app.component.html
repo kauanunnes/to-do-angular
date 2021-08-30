@@ -1,8 +1,5 @@
 <div>
-  <form (submit)="addNewTask($event)" autocomplete="off">
-    <input type="text" id="newTask" placeholder="Digite uma nova tarefa" />
-    <button>Salvar</button>
-  </form>
+  <app-form class="form" (addNewTask)="addNewTask($event)"></app-form>
   <app-to-do-items
     class="table"
     [toDoList]="toDoList"
