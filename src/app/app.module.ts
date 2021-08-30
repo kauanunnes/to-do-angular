@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { ToDoItemsComponent } from './views/to-do-items/to-do-items.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormComponent } from './views/form/form.component';
+import { TaskComponent } from './views/task/task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToDoItemsComponent,
     FormComponent,
+    TaskComponent,
 
   ],
   imports: [
