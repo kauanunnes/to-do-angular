@@ -21,23 +21,15 @@ export class AppComponent implements OnInit {
         return task;
       });
     }
-
   }
 
-  addNewTask(event: Event) {
-    event.preventDefault();
-    const input: HTMLInputElement = <HTMLInputElement>(
-      document.querySelector('input')
-    );
-    if (!input.value) return;
-
+  addNewTask(newTask: string) {
     this.toDoList.push({
-      text: input.value,
+      text: newTask,
       finished: false,
       id: uniqid(),
     });
 
-    input.value = '';
     window.localStorage.setItem('todolist', JSON.stringify(this.toDoList));
   }
 
