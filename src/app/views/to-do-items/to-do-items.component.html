@@ -1,0 +1,15 @@
+<div>
+  <table>
+    <tr *ngFor="let item of toDoList" id="{{item.id}}">
+      <td>
+        <input type="checkbox" name="task" id="" (click)="handleFinished($event, item)" *ngIf="item.finished" checked/>
+        <input type="checkbox" name="task" id="" (click)="handleFinished($event, item)" *ngIf="!item.finished"/>
+      </td>
+      <td *ngIf="item.finished" class="done">{{item.text}}</td>
+      <td *ngIf="!item.finished">{{item.text}}</td>
+      <td>
+        <mat-icon class="trash-can-icon" (click)="handleRemoveTask(item)">delete</mat-icon>
+      </td>
+    </tr>
+  </table>
+</div>
