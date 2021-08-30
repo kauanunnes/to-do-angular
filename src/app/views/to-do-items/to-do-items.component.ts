@@ -21,11 +21,7 @@ export class ToDoItemsComponent implements OnInit {
     this.removeTask.emit(item)
   }
 
-  handleFinished(event: Event, item: Item) {
-    const input:HTMLInputElement = <HTMLInputElement>event.currentTarget
-    const tr:HTMLTableRowElement = <HTMLTableRowElement>input.parentElement?.parentElement
-    tr.className = "done"
-    tr.className = input.checked ?  "done" : "";
+  handleFinished(item: Item) {
     this.finishedTask.emit(item)
   }
 }

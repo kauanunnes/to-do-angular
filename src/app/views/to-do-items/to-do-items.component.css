@@ -11,23 +11,3 @@ table {
   height: auto;
   padding: 10px;
 }
-table tr {
-  padding: 10px 5px;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
-table tr td:nth-child(3) {
-  justify-self: flex-end;
-}
-
-.trash-can-icon {
-  color: #2C5288;
-  cursor: pointer;
-}
-
-tr.done td:nth-child(2),
-td.done {
-  text-decoration: line-through;
-}

@@ -1,11 +1,24 @@
-<!-- <tr *ngFor="let item of toDoList" id="{{item.id}}">
+<tr id="{{ task.id }}">
   <td>
-    <input type="checkbox" name="task" id="" (click)="handleFinished($event, item)" *ngIf="item.finished" checked/>
-    <input type="checkbox" name="task" id="" (click)="handleFinished($event, item)" *ngIf="!item.finished"/>
+    <input
+      type="checkbox"
+      name="task"
+      (click)="handleFinished($event, task)"
+      *ngIf="task.finished"
+      checked
+    />
+    <input
+      type="checkbox"
+      name="task"
+      (click)="handleFinished($event, task)"
+      *ngIf="!task.finished"
+    />
   </td>
-  <td *ngIf="item.finished" class="done">{{item.text}}</td>
-  <td *ngIf="!item.finished">{{item.text}}</td>
+  <td *ngIf="task.finished" class="done">{{ task.text }}</td>
+  <td *ngIf="!task.finished">{{ task.text }}</td>
   <td>
-    <mat-icon class="trash-can-icon" (click)="handleRemoveTask(item)">delete</mat-icon>
+    <mat-icon class="trash-can-icon" (click)="handleRemoveTask(task)"
+      >delete</mat-icon
+    >
   </td>
-</tr> -->
+</tr>
