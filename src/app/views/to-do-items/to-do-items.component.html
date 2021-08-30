@@ -1,5 +1,5 @@
 <div>
   <table>
-    <app-task *ngFor="let item of toDoList" [task]="item" (removeTask)="handleRemoveTask($event)" (finishedTask)="handleFinished($event)"></app-task>
+    <app-task *ngFor="let item of toDoList" [task]="item" (removeTask)="handleRemoveTask($event)" (finishedTask)="handleFinished($event, item)"></app-task>
   </table>
 </div>

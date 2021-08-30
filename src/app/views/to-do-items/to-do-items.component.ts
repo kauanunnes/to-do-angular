@@ -4,24 +4,22 @@ import { Item } from 'src/app/models/Item';
 @Component({
   selector: 'app-to-do-items',
   templateUrl: './to-do-items.component.html',
-  styleUrls: ['./to-do-items.component.css']
+  styleUrls: ['./to-do-items.component.css'],
 })
 export class ToDoItemsComponent implements OnInit {
-  @Input() toDoList!:Item[]
-  @Output() removeTask = new EventEmitter()
-  @Output() finishedTask = new EventEmitter()
+  @Input() toDoList!: Item[];
+  @Output() removeTask = new EventEmitter();
+  @Output() finishedTask = new EventEmitter();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
 
+  handleRemoveTask(item: Item): void {
+    this.removeTask.emit(item);
   }
 
-  handleRemoveTask(item: Item):void {
-    this.removeTask.emit(item)
-  }
-
-  handleFinished(item: Item) {
-    this.finishedTask.emit(item)
+  handleFinished(event: Event, item: Item) {
+    this.finishedTask.emit(item);
   }
 }
